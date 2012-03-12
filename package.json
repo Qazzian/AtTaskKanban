@@ -1,0 +1,20 @@
+{
+	"name": "application-name",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"backbone": "latest",
+		"express": "2.5.8",
+		"jade": ">= 0.0.1",
+		"less": "latest",
+		"mustache": "latest",
+		"socket.io": "latest",
+		"underscore": "latest"
+	},
+	"devDependencies": {
+		"mocha": "0.3.x"
+	},
+	"scripts": {
+		"test": "mocha -u tdd"
+	}
+}
