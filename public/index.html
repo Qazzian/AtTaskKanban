@@ -12,6 +12,15 @@ and open the template in the editor.
 	<script src="js/lib/json2.js"></script>
 	<script src="js/lib/underscore-1.2.1.js"></script>
 	<script src="js/lib/backbone.js"></script>
+	
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+		var socket = io.connect();
+		socket.on('test', function(data){
+			$('#testResult').html(data);
+		});
+		socket.emit('test');
+	</script>
   </head>
   <body>
 		<div class="head">TODO write content</div>
@@ -20,6 +29,7 @@ and open the template in the editor.
 			AtTask Kanban 
 			&COPY; 2012 <a href="http://Qazzian.co.uk">Qazzian.co.uk</a>
 			License <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a>
+			<p id="testResult"></p>
 		</div>
   </body>
 </html>
