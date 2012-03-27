@@ -1,0 +1,12 @@
+<div id="{{id}}" class="taskOverview {{status}}">
+	<p>{{title}}</p>
+	<span class="estimate">{{estimate}}</span>
+	{{#hasComments}}
+	<a class="commentIcon">
+	{{/hasComments}}
+	<ul class="Workers">
+		{{#workers}}
+		<li>{{{html}}}</li>
+		{{/workers}}
+	</ul>
+</div>
