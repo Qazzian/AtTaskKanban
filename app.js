@@ -46,7 +46,7 @@ sio.sockets.on('connection', function(socket) {
  
 	socket.on('version', function(){
 		socket.emit('version', VERSION);
-	})
+	});
 	
     socket.on('disconnect', function() {
         console.log('A socket with seshID ' + hs.sessionID + ' has disconnected');
