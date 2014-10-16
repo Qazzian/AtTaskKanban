@@ -12,9 +12,9 @@ var app = module.exports = express.createServer();
 // Configuration
 
 app.configure(function(){
-  app.set( 'views', __dirname + '/views' );
-//  app.set('view engine', 'jade');
   app.set( 'view engine', 'mustache' );
+  app.set( 'views', __dirname + '/views' );
+  app.register(".mustache", require('stache'));
   app.use( express.bodyParser() );
   app.use( express.methodOverride() );
   app.use( express.compiler({ src: __dirname + '/public', enable: ['less'] }) );
